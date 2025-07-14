@@ -1,5 +1,5 @@
 <script setup>
-    const navOpen = ref(true)
+    const navOpen = ref(false)
     const navigation = [
         'About', 'Project', 'Timeline', 'Experience', 'Contact'
     ];
