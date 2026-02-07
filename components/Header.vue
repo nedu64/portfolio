@@ -8,8 +8,8 @@
     }
 </script>
 <template>
-    <header class="border-b-2 border-primary-light"> 
-        <section class="max-w-[1700px] mx-auto min-h-[40px] flex items-center justify-between px-8 py-8 text-white">
+    <header class="border-b-2 border-primary-light page-layout__header"> 
+        <section class="min-h-[40px] flex items-center justify-between px-8 py-8 text-white">
             <h2 class="text-primary-light">LOGO</h2>
             <div class="relative">
                 <div class="relative p-4 md:hidden flex justify-end" :class="navOpen ? 'absolute z-10' : 'static'">
