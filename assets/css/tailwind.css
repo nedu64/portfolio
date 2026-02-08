@@ -4,6 +4,10 @@
 
 body {
     font-family: NTR, sans-serif;
+
+	&.nav-open {
+		@apply overflow-hidden;
+	}
 }
 
 .page-content-layout {

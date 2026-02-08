@@ -1,11 +1,26 @@
 <script setup>
-    const navOpen = ref(false)
+    const navOpen = useState('navopen', () => false);
+
     const navigation = [
-        'About', 'Project', 'Timeline', 'Experience', 'Contact'
+        'About', 'Projects', 'Timeline', 'Experience', 'Contact'
     ];
+
     const toggleActive = () => {
         navOpen.value = !navOpen.value
     }
+
+    watch(
+		() => navOpen.value,
+		(value) => {
+			if(value) {
+                document.getElementsByTagName('body')[0].classList.add('nav-open');
+
+                window.scrollTo(0,0);
+            } else {
+                document.getElementsByTagName('body')[0].classList.remove('nav-open');
+            }
+		}
+	);
 </script>
 <template>
     <header class="border-b-2 border-primary-light page-layout__header"> 
