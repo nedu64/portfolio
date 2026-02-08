@@ -25,7 +25,10 @@
 <template>
     <header class="border-b-2 border-primary-light page-layout__header"> 
         <section class="min-h-[40px] flex items-center justify-between px-8 py-8 text-white">
-            <h2 class="text-primary-light">LOGO</h2>
+            <span class="sr-only">LOGO</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 text-primary-light">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+            </svg>
             <div class="relative">
                 <div class="relative p-4 md:hidden flex justify-end" :class="navOpen ? 'absolute z-10' : 'static'">
                     <button class="inline-flex flex-col gap-y-[6px] relative min-h-[19px]" @click="toggleActive">
