@@ -14,6 +14,17 @@
             default: '',
             required: false,
         },
+
+        theme: {
+            type: String,
+            default: 'light',
+            validator: (propValue) => ['light', 'dark'].includes(propValue),
+        },
+
+        class: {
+            type: String,
+            default: '',
+        }
 	});
 
     const headingClass = computed(() => {
@@ -26,12 +37,13 @@
 			6: 'h6',
 		};
 
-		return level[props.headingLevel];
-	});
+        const color = {
+            'light': 'text-white',
+            'dark': 'text-black'
+        };
 
-    const hashedClass = computed(() => {
-        return props.headingLevel === '2' ? '[&_span]:before:content-[\'\'] [&_span]:before:text-primary-light' : ''
-    })
+		return `${level[props.headingLevel]} ${color[props.theme]} ${props.class}`;
+	});
 
 </script>
 
@@ -39,31 +51,29 @@
     <component
 		:is="`h${headingLevel}`"
 		:id="id"
-		class="uppercase tracking-widest font-bold"
+		class="uppercase font-extrabold font-['Oswald']"
         :class="headingClass"
 	>
-        <span>
-            <!-- @slot The main content slot -->
-            <slot />
-        </span>
+        <!-- @slot The main content slot -->
+        <slot />
 	</component>
 </template>
 
 <style lang="postcss" scoped>
     .h1 {
-        @apply text-4xl;
+        @apply text-3xl lg:text-4xl;
     }
     .h2 {
-        @apply text-3xl [&_span]:before:content-['#'] [&_span]:before:text-primary-light;
+        @apply text-2xl lg:text-3xl;
     }
     .h3 {
-        @apply text-2xl;
+        @apply text-xl lg:text-2xl;
     }
     .h4 {
-        @apply text-xl;
+        @apply text-lg lg:text-xl;
     }
     .h5 {
-        @apply text-lg;
+        @apply text-base lg:text-lg;
     }
     .h6 {
         @apply text-[17px];

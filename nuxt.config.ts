@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: false },
-  modules: ['@nuxt/icon', '@nuxtjs/tailwindcss', '@nuxt/fonts'],
+  imports: {
+    autoImport: true
+  },
+  modules: ['@nuxt/icon', '@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/content'],
   tailwindcss: {
     exposeConfig: true,
     viewer: true,

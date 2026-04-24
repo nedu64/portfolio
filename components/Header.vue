@@ -23,7 +23,7 @@
 	);
 </script>
 <template>
-    <header class="border-b-2 border-primary-light page-layout__header"> 
+    <header class="border-b-2 border-primary-light page-layout__header font-['Oswald'] font-bold"> 
         <section class="min-h-[40px] flex items-center justify-between px-8 py-8 text-white">
             <span class="sr-only">LOGO</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 text-primary-light">

@@ -2,15 +2,11 @@
     const socialNavigation = [
         {
             icon: 'uil:github',
-            link: '#'
+            link: 'https://github.com/baksben'
         },
         {
             icon: 'uil:linkedin',
-            link: '#'
-        },
-        {
-            icon: 'uil:twitter',
-            link: '#'
+            link: 'https://www.linkedin.com/in/benbaks/'
         },
     ]
 </script>
@@ -20,7 +16,9 @@
         <nav class="px-8 py-8 lg:pl-8 w-full lg:w-auto z-1 lg:fixed bottom-0">
             <ul class="flex gap-x-10 justify-center lg:flex-col gap-y-8 bottom-0 left-0 min-w-10">
                 <li v-for="(item, index) in socialNavigation" :key="index">
-                    <Icon :name="item.icon" class="text-primary-light" size="2em" />
+                    <a :href="item.link" target="_blank">
+                        <Icon :name="item.icon" class="text-primary-light" size="2em" />
+                    </a>
                 </li>
             </ul>
         </nav>
