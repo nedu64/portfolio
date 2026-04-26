@@ -4,12 +4,10 @@ const { data: home } = await useAsyncData(() => queryCollection('content').path(
 useSeoMeta({
   title: home.value?.title,
 })
-
-console.log(home.value.description)
 </script>
 
 <template>
-  <main class="text-white page-layout__content">
+  <div class="text-white">
     <Profile 
       :heading="home.meta.heading"
       :copy="home.meta.copy"
@@ -18,5 +16,5 @@ console.log(home.value.description)
       :resume-link-text="home.meta.resumeLinkText"
     />
     <Projects />
-  </main>
+  </div>
 </template>

@@ -28,21 +28,12 @@
 	});
 
     const headingClass = computed(() => {
-		const level = {
-			1: 'h1',
-			2: 'h2',
-			3: 'h3',
-			4: 'h4',
-			5: 'h5',
-			6: 'h6',
-		};
-
         const color = {
             'light': 'text-white',
             'dark': 'text-black'
         };
 
-		return `${level[props.headingLevel]} ${color[props.theme]} ${props.class}`;
+		return `${color[props.theme]} ${props.class}`;
 	});
 
 </script>
@@ -58,25 +49,3 @@
         <slot />
 	</component>
 </template>
-
-<style lang="postcss" scoped>
-    .h1 {
-        @apply text-3xl lg:text-4xl;
-    }
-    .h2 {
-        @apply text-2xl lg:text-3xl;
-    }
-    .h3 {
-        @apply text-xl lg:text-2xl;
-    }
-    .h4 {
-        @apply text-lg lg:text-xl;
-    }
-    .h5 {
-        @apply text-base lg:text-lg;
-    }
-    .h6 {
-        @apply text-[17px];
-    }
-
-</style>

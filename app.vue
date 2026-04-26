@@ -1,7 +1,9 @@
 <template>
-  <div class="relative page-content-layout bg-black">
+  <div class="relative page-content-layout">
     <Header />
-    <NuxtPage />
+    <main class="page-layout__content">
+      <NuxtPage />
+    </main>
     <Footer />
   </div>
 </template>

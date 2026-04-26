@@ -10,5 +10,23 @@ export default defineNuxtConfig({
     exposeConfig: true,
     viewer: true,
     // and more...
+  },
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            // Default theme (same as single string)
+            default: 'github-dark',
+            // Theme used if `html.sepia`
+            sepia: 'monokai'
+          }
+        },
+      }
+    },
+    renderer: {
+      anchorLinks: false
+    }
   }
+
 })

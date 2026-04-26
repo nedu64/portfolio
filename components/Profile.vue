@@ -11,34 +11,36 @@
 </script>
 
 <template>
-    <div class="px-8 lg:px-0">
-        <article class="lg:max-w-[900px] xl:max-w-[1300px] xl:px-10 mx-auto flex flex-col-reverse gap-6 lg:flex-row lg:gap-12 py-10 lg:px-0 lg:py-24">
-            <div class="w-full lg:w-1/2 flex flex-col gap-10  lg:py-20">
-                <div class="flex flex-col gap-4 ">
-                    <h1 class="font-bold text-3xl lg:text-4xl font-['Oswald']">{{ heading ?? 'Welcome' }}</h1>
-                    <p class="text-base md:text-lg lg:text-[20px] lg:leading-8">
-                    {{ copy ?? 'Introduction' }}
-                    </p>
+    <section class="bg-black">
+        <div class="px-8 lg:px-0">
+            <article class="lg:max-w-[900px] xl:max-w-[1300px] xl:px-10 mx-auto flex flex-col-reverse gap-6 lg:flex-row lg:gap-12 py-10 lg:px-0 lg:py-24">
+                <div class="w-full lg:w-1/2 flex flex-col gap-10  lg:py-20">
+                    <div class="flex flex-col gap-4 ">
+                        <h1 class="font-bold text-3xl lg:text-4xl font-['Oswald']">{{ heading ?? 'Welcome' }}</h1>
+                        <p class="text-base md:text-lg lg:text-[20px] lg:leading-8">
+                        {{ copy ?? 'Introduction' }}
+                        </p>
+                    </div>
+                    <div v-if="resumeLink && resumeLinkText">
+                        <a 
+                            :href="resumeLink"
+                            target="_blank"
+                            class="inline-flex items-center gap-1 group border-2 border-white text-white py-2 px-4 uppercase rounded-lg hover:scale-110 transition-transform duration-300"
+                        >
+                            <Icon name="material-symbols:article" class="text-white" size="1.5em" />
+                            <span class="font-bold font-['Oswald']">{{ resumeLinkText ?? 'Link Text' }}</span>
+                        </a>
+                    </div>
                 </div>
-                <div v-if="resumeLink && resumeLinkText">
-                    <a 
-                        :href="resumeLink"
-                        target="_blank"
-                        class="inline-flex items-center gap-1 group border-2 border-white text-white py-2 px-4 uppercase rounded-lg hover:scale-110 transition-transform duration-300"
-                    >
-                        <Icon name="material-symbols:article" class="text-white" size="1.5em" />
-                        <span class="font-bold font-['Oswald']">{{ resumeLinkText ?? 'Link Text' }}</span>
-                    </a>
-                </div>
-            </div>
-            <figure class="w-full lg:w-1/2">
-                <img
-                    v-if="image"
-                    :src="image"
-                    class="w-full h-full object-cover object-center rounded-md"
-                    alt="Bakwenye Benjamin"
-                />
-            </figure>
-        </article>
-    </div>
+                <figure class="w-full lg:w-1/2">
+                    <img
+                        v-if="image"
+                        :src="image"
+                        class="w-full h-full object-cover object-center rounded-md"
+                        alt="Bakwenye Benjamin"
+                    />
+                </figure>
+            </article>
+        </div>
+    </section>
 </template>

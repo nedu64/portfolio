@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <main class="text-white px-8 lg:px-0 page-layout__content">
+    <div class="text-white px-8 lg:px-0">
         <Profile />
         <Projects />
-    </main>
+    </div>
 </template>
