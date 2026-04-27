@@ -37,6 +37,6 @@
         <div v-if="tags.length" class="px-3 md:px-8 flex flex-wrap gap-2">
             <span v-for="(tag, index) in tags" :key="index" class="border border-black group-hover:border-dashed px-3 py-1 rounded-full text-xs font-['Oswald'] font-black uppercase">{{ tag }}</span>
         </div>
-        <a :href="link" class="opacity-0 absolute inset-0">Hello</a>
+        <a :href="link" class="opacity-0 absolute inset-0"></a>
     </article>
 </template>

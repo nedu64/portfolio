@@ -20,7 +20,10 @@ export default defineNuxtConfig({
             default: 'github-dark',
             // Theme used if `html.sepia`
             sepia: 'monokai'
-          }
+          },
+          langs: [
+            'python'
+          ]
         },
       }
     },

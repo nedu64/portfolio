@@ -17,6 +17,11 @@
                     :tags="project.meta.tags"
                 />
             </div>
+            <div class="flex justify-center">
+                <BaseButton link="/projects" type="secondary">
+                    View All Projects
+                </BaseButton>
+            </div>
         </article>
     </section>
 </template>

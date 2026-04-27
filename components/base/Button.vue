@@ -8,7 +8,11 @@
             type: String,
             default: 'primary',
             validator: (propValue) => ['primary', 'secondary'].includes(propValue),
-        }
+        },
+        target: {
+            type: String,
+            default: ''
+        },
     });
 
     const btnClass = computed(() => {
@@ -21,7 +25,7 @@
     })
 </script>
 <template>
-    <a :href="link ?? ''" :class="btnClass">
+    <a :href="link ?? ''" :class="btnClass" :target="target">
         <slot />
     </a>
 </template>
